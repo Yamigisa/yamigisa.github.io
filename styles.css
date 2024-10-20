@@ -1,0 +1,69 @@
+#about {
+    background: #FBC500;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: -10px -8px 0px -8px;
+    height: 680px;
+    padding-top: 20px;
+}
+#about .about-content {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+
+#about img {
+    width: 300px; /* Adjust the width as needed */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+    margin-right: 20px; /* Space between the image and text */
+    margin-left: 20px; /* Move the image a bit to the right */
+    margin-top: 100px;
+    position: relative;
+}
+
+#about .about-text {
+    max-width: 600px; /* Limit the width of the text */
+}
+#about .about-text h2 {
+    font-size: 36px; /* Adjust the size as needed */
+    font-weight: bold; /* Optional: make it bolder */
+    margin-bottom: 10px; /* Add some space below the heading */
+    flex-direction: row;
+}
+.top {
+    background: white;
+    height: 50px;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+}
+
+nav a {
+    text-decoration: none; 
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+nav li {
+    margin-left: 40px;
+    margin-top: 7px;
+    display: inline-block;
+    padding: 10px; /* Base padding */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+li:hover {
+    background-color: gray;
+    border-radius: 5px;
+    padding: 10px; /* Keep padding the same on hover */
+}
+
+@media screen and (max-width: 715px) {
+    .top {
+        display: none;
+    }
+}
+

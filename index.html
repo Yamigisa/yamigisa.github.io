@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Ridho's Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif; color: #2e1b13; /* Changed the font color */}
+.mySlides {display: none}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-card" style="background-color: #FBC500;">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+    <a href="#skill" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SKILL</a>
+    <a href="#project" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
+  <a href="#skill" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SKILL</a>
+  <a href="#project" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PROJECT</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+<!-- The About Section -->
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px; min-height:700px; display: flex; flex-direction: column; justify-content: center; align-items: center;" id="about">
+    <div class="w3-third" style="text-align: center;">
+      <img src="/images/Ridho.png" class="w3-round w3-margin-bottom" alt="Ridho" style="width:80%;">
+    </div>
+    <div class="w3-twothird" style="text-align: center;">
+      <h2 class="w3-wide" style="font-family: 'Lato', sans-serif; font-weight: bold;">I'M RIDHO</h2>
+      <p class="w3-justify" style="font-family: 'Lato', sans-serif;">I'm an undergraduate game technology student at Electronic Engineering Polytechnic Institute of Surabaya (EEPIS). I am 20 years old. I am interested in the game development field, specifically game programming in the game engine Unity.</p>
+    </div>
+    
+    <!-- Download CV Button -->
+    <div style="margin-top: 20px;">
+      <a href="/files/CV_Ridho Dwi Ananta.pdf" class="w3-button w3-black w3-padding-large w3-margin-top w3-round" style="border-radius: 25px; font-family: 'Lato', sans-serif; font" download="CV_Ridho Dwi Ananta.pdf">Download CV</a>
+    </div>
+  </div>
+  
+  
+<!-- The Skill Section -->
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width: 1600px; min-height: 700px; background-color: #FBC500; position: relative;" id="skill">
+    <div style="display: flex; flex-direction: row; align-items: center; height: 100%; flex-wrap: wrap;">
+        <!-- Left-aligned Text -->
+        <div class="left-text" style="flex: 40; margin-right: 20px;">
+            <h3 style="font-size: 64px; font-family: 'Lato', sans-serif; font-weight: bold; ">My skills</h3>
+        </div>
+
+        <!-- Right-aligned Skills -->
+        <div style="flex: 60; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <!-- Game Programmer with Title, Description, and Image -->
+            <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+                <div style="flex: 2; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <h4 style="margin: 0; font-weight: bold; font-size: 32px; font-family: 'Lato', sans-serif;">Game Programmer</h4>
+                    <p style="margin: 10; font-size: 16px; font-family: 'Lato', sans-serif;">Mainly a programmer who likes to work on game mechanics using Unity.</p>
+                </div>
+                <div style="flex: 1; margin-left: 20px;">
+                    <img src="/images/Program.png" alt="Game Programmer" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr style="border: none; border-top: 2px solid black; width: 100%; margin: 20px auto;">
+
+            <!-- UI Artist with Title, Description, and Image -->
+            <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
+                <div style="flex: 2; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <h4 style="margin: 0; font-weight: bold; font-size: 32px; font-family: 'Lato', sans-serif;">UI Artist</h4>
+                    <p style="margin: 10; font-size: 16px; font-family: 'Lato', sans-serif;">Creating UI assets using Adobe Illustrator</p>
+                </div>
+                <div style="flex: 1; margin-left: 20px;">
+                    <img src="/images/UI Artist.png" alt="UI Artist" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr style="border: none; border-top: 2px solid black; width: 100%; margin: 20px auto;">
+
+            <!-- Game Mechanics Design with Title, Description, and Image -->
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <div style="flex: 2; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                    <h4 style="margin: 0; font-weight: bold; font-size: 32px; font-family: 'Lato', sans-serif;">Game Mechanics Design</h4>
+                    <p style="margin: 10; font-size: 16px; font-family: 'Lato', sans-serif;">Developing gameplay mechanics.</p>
+                </div>
+                <div style="flex: 1; margin-left: 20px;">
+                    <img src="/images/Game Mechanics Design.png" alt="Game Mechanics Design" style="max-width: 100%; height: auto;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    @media (max-width: 768px) {
+        .left-text {
+            margin-top: 0; /* Reset margin-top on smaller screens */
+        }
+
+        /* Adjust layout for smaller screens */
+        #skill div {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        #skill img {
+            max-width: 80%; /* Adjust image size on smaller screens */
+        }
+    }
+</style>
+
+<!-- The Project Section -->
+<div class="w3-container w3-content w3-padding-64" style="max-width: 1600px; min-height: 700px; position: relative;" id="project">
+    <div style="display: inline-block; border-bottom: 1px solid #000; margin-bottom: 20px; width: fit-content; padding-left: 20px;">
+        <h2 style="font-size: 48px; margin: 0; font-family: 'Lato', sans-serif; font-weight: bold;">Projects</h2>
+    </div>
+
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; align-items: flex-start;">
+        <!-- First Project -->
+        <div style="flex: 1 1 300px; margin: 20px; text-align: left; box-sizing: border-box;">
+            <h3 style="font-size: 24px; margin: 0; font-family: 'Lato', sans-serif; font-weight: bold;">Mago the Great</h3>
+            <p style="font-size: 14px; color: #7A7A7A; margin: 0; font-family: 'Lato', sans-serif;">Digital Game</p>
+            <a href="https://yamigisa.itch.io/mago-the-great" target="_blank" style="text-decoration: none;">
+                <img src="/images/Mago the Great.png" alt="Mago the Great cover" style="width: 100%; margin-top: 10px;">
+            </a>
+        </div>
+
+        <!-- Second Project -->
+        <div style="flex: 1 1 300px; margin: 20px; text-align: left; box-sizing: border-box;">
+            <h3 style="font-size: 24px; margin: 0; font-family: 'Lato', sans-serif; font-weight: bold;">A Cat's Tail</h3>
+            <p style="font-size: 14px; color: #7A7A7A; margin: 0; font-family: 'Lato', sans-serif;">Digital Game</p>
+            <a href="https://yamigisa.itch.io/a-cats-tail" target="_blank" style="text-decoration: none;">
+                <img src="/images/A Cat's Tail.png" alt="A Cat's Tail Main Menu" style="width: 100%; margin-top: 10px;">
+            </a>
+        </div>
+
+        <!-- Third Project -->
+        <div style="flex: 1 1 300px; margin: 20px; text-align: left; box-sizing: border-box;">
+            <h3 style="font-size: 24px; margin: 0; font-family: 'Lato', sans-serif; font-weight: bold;">Project Grow</h3>
+            <p style="font-size: 14px; color: #7A7A7A; margin: 0; font-family: 'Lato', sans-serif;">Digital Game</p>
+            <a href="https://imfeelingood.itch.io/project-grow-android" target="_blank" style="text-decoration: none;">
+                <img src="/images/Project Grow.png" alt="Project Grow Logo" style="width: 100%; margin-top: 10px;">
+            </a>
+        </div>
+    </div>
+
+    <!-- View All Projects Button -->
+    <div style="text-align: center; margin-top: 50px; position: absolute; bottom: 20px; width: 100%;">
+        <a href="https://yamigisa.itch.io/" target="_blank" style="text-decoration: none; font-size: 16px; color: #000; position: relative; display: inline-block;">
+            <span style="border: 2px solid #000; border-radius: 50%; padding: 20px; display: inline-block; font-family: 'Lato', sans-serif; font-weight: bold; margin-bottom: -10px;">
+                View all Projects
+            </span>
+        </a>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- The Contact Section -->
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width: 1600px; min-height: 700px; background-color: #FBC500; position: relative; width: 100%;" id="contact">
+    <h3 style="font-size: 64px; font-weight: bold; margin-bottom: 40px; font-family: 'Lato';">Contact Me</h3>
+
+    <div style="display: flex; flex-direction: row; justify-content: space-around; align-items: flex-start; flex-wrap: wrap;">
+        <div style="flex: 1 1 200px; margin: 20px; text-align: center; box-sizing: border-box;">
+            <img src="/images/address icon.png" alt="Address Icon" style="max-width: 50%; height: auto;">
+            <h4 style="margin: 10px 0; font-weight: bold; font-size: 32px; font-family: 'Lato';">Address</h4>
+            <p style="font-size: 16px;">Surabaya, East Java, Indonesia</p>
+        </div>
+
+        <div style="flex: 1 1 200px; margin: 20px; text-align: center; box-sizing: border-box;">
+            <img src="/images/number icon.png" alt="Phone Icon" style="max-width: 50%; height: auto;">
+            <h4 style="margin: 10px 0; font-weight: bold; font-size: 32px; font-family: 'Lato';">Phone Number</h4>
+            <p style="font-size: 16px;">+6287777177892</p>
+        </div>
+
+        <a href="mailto:ridhodwia4@gmail.com" style="text-decoration: none; color: inherit; flex: 1 1 200px; margin: 20px; text-align: center; transition: opacity 0.3s;">
+            <div style="box-sizing: border-box; opacity: 1; transition: opacity 0.3s;">
+                <img src="/images/email icon.png" alt="Email Icon" style="max-width: 50%; height: auto;">
+                <h4 style="margin: 10px 0; font-weight: bold; font-size: 32px; font-family: 'Lato';">Email</h4>
+                <p style="font-size: 16px;">ridhodwia4@gmail.com</p>
+            </div>
+        </a>
+    </div>
+</div>
+
+<style>
+    /* Hover effect for the email section */
+    a:hover div {
+        opacity: 0.75; /* Change opacity to 75% on hover */
+    }
+</style>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+    <a href="https://www.linkedin.com/in/ridho-dwi-ananta-a43b2821a/" target="_blank" style="text-decoration: none; color: inherit;">
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </a>
+    <a href="https://github.com/Yamigisa" target="_blank" style="text-decoration: none; color: inherit;">
+      <i class="fa fa-github w3-hover-opacity"></i>
+    </a>
+    <a href="https://www.instagram.com/lookwhatridhodoes/profilecard/?igsh=MXZ0Z21seGh0b2thYg==" target="_blank" style="text-decoration: none; color: inherit;">
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+    </a>
+    <p class="w3-medium">Ridho Dwi Ananta</p>
+  </footer>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
