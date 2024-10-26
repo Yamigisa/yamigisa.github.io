@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="icon" href="/images/Firefly and Blade.png" type="image/x-icon">
 <title>Ridho's Portfolio</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,19 +17,31 @@ body {font-family: "Lato", sans-serif; color: #2e1b13; /* Changed the font color
 
 <!-- Navbar -->
 <div class="w3-top">
-    <div class="w3-bar w3-card" style="background-color: #FBC500;">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-    <a href="#skill" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SKILL</a>
-    <a href="#project" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-  </div>
+    <div class="w3-bar w3-card" style="background-color: #FBC500; display: flex; align-items: center;">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu">
+            <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-hide-small">HOME</a>
+        <a href="#skill" class="w3-bar-item w3-button w3-padding-large w3-hide-small">SKILL</a>
+        <a href="#project" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROJECT</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
+
+        <span class="navbar-name">Ridho Dwi Ananta</span>
+    </div>
 </div>
 
+<style>
+    .navbar-name {
+    margin-left: auto;
+    padding: 0 16px;
+    font-weight: bold;
+    color: #000;
+}
+</style>
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
 <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#home" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
   <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
-  <a href="#skill" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">SKILL</a>
   <a href="#project" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PROJECT</a>
   <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
 </div>
@@ -37,7 +50,7 @@ body {font-family: "Lato", sans-serif; color: #2e1b13; /* Changed the font color
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
 <!-- The About Section -->
-<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px; min-height:700px; display: flex; flex-direction: column; justify-content: center; align-items: center;" id="about">
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px; min-height:700px; display: flex; flex-direction: column; justify-content: center; align-items: center;" id="home">
     <div class="w3-third" style="text-align: center;">
       <img src="/images/Ridho.png" class="w3-round w3-margin-bottom" alt="Ridho" style="width:80%;">
     </div>
@@ -53,76 +66,149 @@ body {font-family: "Lato", sans-serif; color: #2e1b13; /* Changed the font color
   </div>
   
   
-<!-- The Skill Section -->
-<div class="w3-container w3-content w3-center w3-padding-64" style="max-width: 1600px; min-height: 700px; background-color: #FBC500; position: relative;" id="skill">
+<!-- More About Me Section -->
+<div class="w3-container w3-content w3-center w3-padding-64" style="max-width: 1600px; min-height: 700px; background-color: #FBC500; position: relative;" id="about">
     <div style="display: flex; flex-direction: row; align-items: center; height: 100%; flex-wrap: wrap;">
         <!-- Left-aligned Text -->
         <div class="left-text" style="flex: 40; margin-right: 20px;">
-            <h3 style="font-size: 64px; font-family: 'Lato', sans-serif; font-weight: bold; ">My skills</h3>
+            <h3 style="font-size: 64px; font-family: 'Lato', sans-serif; font-weight: bold;">More about me</h3>
+            <div class="button-group">
+                <button onclick="showSection('skills')" class="section-button active">Skills</button>
+                <button onclick="showSection('experience')" class="section-button">Experience</button>
+                <button onclick="showSection('education')" class="section-button">Education</button>
+            </div>
         </div>
 
-        <!-- Right-aligned Skills -->
+        <!-- Right-aligned Content -->
         <div style="flex: 60; display: flex; flex-direction: column; justify-content: center; align-items: center;">
-            <!-- Game Programmer with Title, Description, and Image -->
-            <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                <div style="flex: 2; display: flex; flex-direction: column; align-items: center; text-align: center;">
-                    <h4 style="margin: 0; font-weight: bold; font-size: 32px; font-family: 'Lato', sans-serif;">Game Programmer</h4>
-                    <p style="margin: 10; font-size: 16px; font-family: 'Lato', sans-serif;">Mainly a programmer who likes to work on game mechanics using Unity.</p>
+            <!-- Skills Content -->
+            <div id="skills" class="section-content">
+                <!-- Game Programmer -->
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <div style="flex: 2; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <h4 style="margin: 0; font-weight: bold; font-size: 32px; font-family: 'Lato', sans-serif;">Game Programmer</h4>
+                        <ul style="list-style-type: disc; text-align: left; margin: 10px;">
+                            <li>Skilled in Unity and C# for developing gameplay mechanics.</li>
+                            <li>Developed and programmed games since 2022.</li>
+                            <li>Able to implement assets and make responsive UI.</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1; margin-left: 20px;">
+                        <img src="/images/Program.png" alt="Game Programmer" style="max-width: 100%; height: auto;">
+                    </div>
                 </div>
-                <div style="flex: 1; margin-left: 20px;">
-                    <img src="/images/Program.png" alt="Game Programmer" style="max-width: 100%; height: auto;">
+
+                <hr style="border: none; border-top: 2px solid black; width: 100%; margin: 20px auto;">
+
+                <!-- UI Artist -->
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <div style="flex: 2; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <h4 style="margin: 0; font-weight: bold; font-size: 32px; font-family: 'Lato', sans-serif;">UI Artist</h4>
+                        <ul style="list-style-type: disc; text-align: left; margin: 10px;">
+                            <li>Able to use Adobe Illustrator to make graphic design.</li>
+                            <li>Implement design to Figma or Unity.</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1; margin-left: 20px;">
+                        <img src="/images/UI Artist.png" alt="UI Artist" style="max-width: 100%; height: auto;">
+                    </div>
+                </div>
+
+                <hr style="border: none; border-top: 2px solid black; width: 100%; margin: 20px auto;">
+
+                <!-- Game Mechanics Design -->
+                <div style="display: flex; align-items: center; justify-content: center;">
+                    <div style="flex: 2; display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <h4 style="margin: 0; font-weight: bold; font-size: 32px; font-family: 'Lato', sans-serif;">Game Mechanics Design</h4>
+                        <ul style="list-style-type: disc; text-align: left; margin: 10px;">
+                            <li>Creating ideas for game mechanics.</li>
+                            <li>Making GDD in.</li>
+                        </ul>
+                    </div>
+                    <div style="flex: 1; margin-left: 20px;">
+                        <img src="/images/Game Mechanics Design.png" alt="Game Mechanics Design" style="max-width: 100%; height: auto;">
+                    </div>
                 </div>
             </div>
 
-            <!-- Divider -->
-            <hr style="border: none; border-top: 2px solid black; width: 100%; margin: 20px auto;">
-
-            <!-- UI Artist with Title, Description, and Image -->
-            <div style="margin-bottom: 20px; display: flex; align-items: center; justify-content: center;">
-                <div style="flex: 2; display: flex; flex-direction: column; align-items: center; text-align: center;">
-                    <h4 style="margin: 0; font-weight: bold; font-size: 32px; font-family: 'Lato', sans-serif;">UI Artist</h4>
-                    <p style="margin: 10; font-size: 16px; font-family: 'Lato', sans-serif;">Creating UI assets using Adobe Illustrator</p>
-                </div>
-                <div style="flex: 1; margin-left: 20px;">
-                    <img src="/images/UI Artist.png" alt="UI Artist" style="max-width: 100%; height: auto;">
-                </div>
+            <!-- Experience Content (Initially Hidden) -->
+            <div id="experience" class="section-content" style="display: none;">
+                <h4 style="font-size: 32px; font-family: 'Lato', sans-serif; font-weight: bold;">Experience</h4>
+                <p style="font-size: 16px; font-family: 'Lato', sans-serif;">Details about experience go here.</p>
             </div>
 
-            <!-- Divider -->
-            <hr style="border: none; border-top: 2px solid black; width: 100%; margin: 20px auto;">
-
-            <!-- Game Mechanics Design with Title, Description, and Image -->
-            <div style="display: flex; align-items: center; justify-content: center;">
-                <div style="flex: 2; display: flex; flex-direction: column; align-items: center; text-align: center;">
-                    <h4 style="margin: 0; font-weight: bold; font-size: 32px; font-family: 'Lato', sans-serif;">Game Mechanics Design</h4>
-                    <p style="margin: 10; font-size: 16px; font-family: 'Lato', sans-serif;">Developing gameplay mechanics.</p>
-                </div>
-                <div style="flex: 1; margin-left: 20px;">
-                    <img src="/images/Game Mechanics Design.png" alt="Game Mechanics Design" style="max-width: 100%; height: auto;">
-                </div>
+            <!-- Education Content (Initially Hidden) -->
+            <div id="education" class="section-content" style="display: none;">
+                <h4 style="font-size: 32px; font-family: 'Lato', sans-serif; font-weight: bold;">Education</h4>
+                <p style="font-size: 16px; font-family: 'Lato', sans-serif;">Details about education go here.</p>
             </div>
         </div>
     </div>
 </div>
 
-
 <style>
+    /* Button Group Styling */
+    .button-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .section-button {
+        font-family: 'Lato', sans-serif;
+        font-size: 20px;
+        padding: 10px 20px;
+        margin: 10px 0;
+        border: none;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .section-button:hover, .section-button.active {
+        background-color: #555;
+    }
+    
+    /* Responsive Styling */
     @media (max-width: 768px) {
         .left-text {
-            margin-top: 0; /* Reset margin-top on smaller screens */
+            margin-top: 0;
         }
 
-        /* Adjust layout for smaller screens */
-        #skill div {
+        #more-about-me div {
             flex-direction: column;
             align-items: flex-start;
         }
 
-        #skill img {
-            max-width: 80%; /* Adjust image size on smaller screens */
+        #more-about-me img {
+            max-width: 80%;
         }
     }
 </style>
+
+<script>
+    // Function to display the selected section and highlight the active button
+    function showSection(sectionId) {
+        // Hide all section contents
+        var contents = document.getElementsByClassName("section-content");
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.display = "none";
+        }
+        
+        // Remove 'active' class from all buttons
+        var buttons = document.getElementsByClassName("section-button");
+        for (var i = 0; i < buttons.length; i++) {
+            buttons[i].classList.remove("active");
+        }
+        
+        // Show the selected section
+        document.getElementById(sectionId).style.display = "block";
+        
+        // Add 'active' class to the clicked button
+        event.currentTarget.classList.add("active");
+    }
+</script>
+
 
 <!-- The Project Section -->
 <div class="w3-container w3-content w3-padding-64" style="max-width: 1600px; min-height: 700px; position: relative;" id="project">
@@ -134,7 +220,8 @@ body {font-family: "Lato", sans-serif; color: #2e1b13; /* Changed the font color
         <!-- First Project -->
         <div style="flex: 1 1 300px; margin: 20px; text-align: left; box-sizing: border-box;">
             <h3 style="font-size: 24px; margin: 0; font-family: 'Lato', sans-serif; font-weight: bold;">Mago the Great</h3>
-            <p style="font-size: 14px; color: #7A7A7A; margin: 0; font-family: 'Lato', sans-serif;">Digital Game</p>
+            <p style="font-size: 14px; color: #7A7A7A; margin: 0; font-family: 'Lato', sans-serif;">Game Programmer</p>
+            <p style="font-size: 14px; color: #7A7A7A; margin: 0; font-family: 'Lato', sans-serif;">I programmed the entire game</p>
             <a href="https://yamigisa.itch.io/mago-the-great" target="_blank" style="text-decoration: none;">
                 <img src="/images/Mago the Great.png" alt="Mago the Great cover" style="width: 100%; margin-top: 10px;">
             </a>
@@ -143,7 +230,8 @@ body {font-family: "Lato", sans-serif; color: #2e1b13; /* Changed the font color
         <!-- Second Project -->
         <div style="flex: 1 1 300px; margin: 20px; text-align: left; box-sizing: border-box;">
             <h3 style="font-size: 24px; margin: 0; font-family: 'Lato', sans-serif; font-weight: bold;">A Cat's Tail</h3>
-            <p style="font-size: 14px; color: #7A7A7A; margin: 0; font-family: 'Lato', sans-serif;">Digital Game</p>
+            <p style="font-size: 14px; color: #7A7A7A; margin: 0; font-family: 'Lato', sans-serif;">Game Programmer</p>
+            <p style="font-size: 14px; color: #7A7A7A; margin: 0; font-family: 'Lato', sans-serif;">I acted as a lead programmer</p>
             <a href="https://yamigisa.itch.io/a-cats-tail" target="_blank" style="text-decoration: none;">
                 <img src="/images/A Cat's Tail.png" alt="A Cat's Tail Main Menu" style="width: 100%; margin-top: 10px;">
             </a>
@@ -152,7 +240,8 @@ body {font-family: "Lato", sans-serif; color: #2e1b13; /* Changed the font color
         <!-- Third Project -->
         <div style="flex: 1 1 300px; margin: 20px; text-align: left; box-sizing: border-box;">
             <h3 style="font-size: 24px; margin: 0; font-family: 'Lato', sans-serif; font-weight: bold;">Project Grow</h3>
-            <p style="font-size: 14px; color: #7A7A7A; margin: 0; font-family: 'Lato', sans-serif;">Digital Game</p>
+            <p style="font-size: 14px; color: #7A7A7A; margin: 0; font-family: 'Lato', sans-serif;">Game Programmer</p>
+            <p style="font-size: 14px; color: #7A7A7A; margin: 0; font-family: 'Lato', sans-serif;">I programmed several game mechanic</p>
             <a href="https://imfeelingood.itch.io/project-grow-android" target="_blank" style="text-decoration: none;">
                 <img src="/images/Project Grow.png" alt="Project Grow Logo" style="width: 100%; margin-top: 10px;">
             </a>
@@ -176,37 +265,40 @@ body {font-family: "Lato", sans-serif; color: #2e1b13; /* Changed the font color
 
 <!-- The Contact Section -->
 <div class="w3-container w3-content w3-center w3-padding-64" style="max-width: 1600px; min-height: 700px; background-color: #FBC500; position: relative; width: 100%;" id="contact">
-    <h3 style="font-size: 64px; font-weight: bold; margin-bottom: 40px; font-family: 'Lato';">Contact Me</h3>
+    <h3 style="font-size: 48px; font-weight: bold; margin-bottom: 100px; font-family: 'Lato';">Contact Me</h3>
 
-    <div style="display: flex; flex-direction: row; justify-content: space-around; align-items: flex-start; flex-wrap: wrap;">
-        <div style="flex: 1 1 200px; margin: 20px; text-align: center; box-sizing: border-box;">
-            <img src="/images/address icon.png" alt="Address Icon" style="max-width: 50%; height: auto;">
-            <h4 style="margin: 10px 0; font-weight: bold; font-size: 32px; font-family: 'Lato';">Address</h4>
-            <p style="font-size: 16px;">Surabaya, East Java, Indonesia</p>
-        </div>
+    <div style="display: flex; flex-direction: row; justify-content: space-around; align-items: center; flex-wrap: wrap; height: 100%;">
+        
+        <!-- Address Section -->
+        <a href="https://www.google.com/maps?q=Surabaya,+East+Java,+Indonesia" target="_blank" style="text-decoration: none; color: inherit; flex: 1 1 200px; margin: 20px; text-align: center; transition: opacity 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+            <div style="box-sizing: border-box; opacity: 1; transition: opacity 0.3s; margin-top: 20px;">
+                <img src="/images/address icon.png" alt="Address Icon" style="max-width: 30%; height: auto; margin-bottom: 10px;">
+                <h4 style="margin: 8px 0; font-weight: bold; font-size: 24px; font-family: 'Lato';">Address</h4>
+                <p style="font-size: 14px;">Surabaya, East Java, Indonesia</p>
+            </div>
+        </a>
 
-        <div style="flex: 1 1 200px; margin: 20px; text-align: center; box-sizing: border-box;">
-            <img src="/images/number icon.png" alt="Phone Icon" style="max-width: 50%; height: auto;">
-            <h4 style="margin: 10px 0; font-weight: bold; font-size: 32px; font-family: 'Lato';">Phone Number</h4>
-            <p style="font-size: 16px;">+6287777177892</p>
-        </div>
+        <!-- Phone Number Section -->
+        <a href="https://wa.me/6287777177892" style="text-decoration: none; color: inherit; flex: 1 1 200px; margin: 20px; text-align: center; transition: opacity 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+            <div style="box-sizing: border-box; opacity: 1; transition: opacity 0.3s; margin-top: 20px;">
+                <img src="/images/number icon.png" alt="Phone Icon" style="max-width: 30%; height: auto; margin-bottom: 10px;">
+                <h4 style="margin: 8px 0; font-weight: bold; font-size: 24px; font-family: 'Lato';">Phone Number</h4>
+                <p style="font-size: 14px;">+6287777177892</p>
+            </div>
+        </a>
 
-        <a href="mailto:ridhodwia4@gmail.com" style="text-decoration: none; color: inherit; flex: 1 1 200px; margin: 20px; text-align: center; transition: opacity 0.3s;">
-            <div style="box-sizing: border-box; opacity: 1; transition: opacity 0.3s;">
-                <img src="/images/email icon.png" alt="Email Icon" style="max-width: 50%; height: auto;">
-                <h4 style="margin: 10px 0; font-weight: bold; font-size: 32px; font-family: 'Lato';">Email</h4>
-                <p style="font-size: 16px;">ridhodwia4@gmail.com</p>
+        <!-- Email Section -->
+        <a href="mailto:ridhodwia4@gmail.com" style="text-decoration: none; color: inherit; flex: 1 1 200px; margin: 20px; text-align: center; transition: opacity 0.3s; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+            <div style="box-sizing: border-box; opacity: 1; transition: opacity 0.3s; margin-top: 20px;">
+                <img src="/images/email icon.png" alt="Email Icon" style="max-width: 30%; height: auto; margin-bottom: 10px;">
+                <h4 style="margin: 8px 0; font-weight: bold; font-size: 24px; font-family: 'Lato';">Email</h4>
+                <p style="font-size: 14px;">ridhodwia4@gmail.com</p>
             </div>
         </a>
     </div>
 </div>
 
-<style>
-    /* Hover effect for the email section */
-    a:hover div {
-        opacity: 0.75; /* Change opacity to 75% on hover */
-    }
-</style>
+
 
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
@@ -219,7 +311,8 @@ body {font-family: "Lato", sans-serif; color: #2e1b13; /* Changed the font color
     <a href="https://www.instagram.com/lookwhatridhodoes/profilecard/?igsh=MXZ0Z21seGh0b2thYg==" target="_blank" style="text-decoration: none; color: inherit;">
       <i class="fa fa-instagram w3-hover-opacity"></i>
     </a>
-    <p class="w3-medium">Ridho Dwi Ananta</p>
+    <p class="w3-medium">Ridho Dwi Ananta </p>
+    <p class="w3-medium">Template from W3Schools</p>
   </footer>
 
 <script>
